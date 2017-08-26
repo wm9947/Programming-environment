@@ -1,0 +1,3 @@
+
+The demo program for the Scratch X(http://scratchx.org/)
+Open one of these file and add extension to use
