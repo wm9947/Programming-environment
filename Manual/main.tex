@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{listings}
+\usepackage[a4paper]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx} %package to manage images
+\usepackage{wrapfig}
+\usepackage{indentfirst}\setlength\parindent{2em}
+
+
+\title{Manual:A Programming Environment for Kinba}
+\author{Woo Min Park / woo\_min.park@kcl.ac.uk }
+\date{September 2017}
+
+\begin{document}
+
+\maketitle
+
+
+\section*{Download and Run}
+
+\noindent Download location 
+
+ - \url{https://github.com/wm9947/Programming-environment}
+ 
+
+\noindent Short description of the application
+
+ - \url{https://github.com/wm9947/Programming-environment/wiki}
+
+The project uses localhost port number 5000, 7000, and 8000.
+Before running the program, make sure that the corresponding port is not used by another program. If the occupied port is unchangeable, you must modify the port number at the source code level.
+
+\subsection*{Scratch Extension}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\textwidth]{scratch.png}
+\end{figure}
+
+The sample project provided on the GitHub can be used by \textbf{Load Project} in file menu.
+The project extension of the file name is '*.sb2'.
+The Scratch extension made by JavaScript can be added by \textbf{Load Experimental Extension}(right click of the mouse).
+
+If the extension has syntax error, the block will not appear.
+The message transmitted to the Data Transmitter can be checked by the console in the Developer tool.
+
+
+\subsection*{Data Transmitter}
+
+\begin{lstlisting}[language=bash]
+  $node DataTransmitter.js
+\end{lstlisting}
+
+\subsection*{Xtion}
+\begin{lstlisting}[language=bash]
+  $./UserViewer
+\end{lstlisting}
+
+The application is located in './Desktop/woomin/NiTE/Sample/Bin/'.
+It transfers the location of the joint obtained by Xtion using OpenNi and NiTE to the Data Transmitter.
+It contains the UDP client to send data.
+
+\newpage
+\section*{Environment Installation}
+
+\subsection*{Node.js and Web Socket library}
+
+\begin{lstlisting}[language=bash]
+  $ sudo apt-get install python-software-properties
+  $ curl -sL https://deb.nodesource.com/setup_8.x 
+  | sudo -E bash -
+  $ sudo apt-get install nodejs
+  
+  $ sudo npm install websocket
+\end{lstlisting}
+
+\subsection*{Chrome}
+
+\begin{lstlisting}[language=bash]
+  $wget https://dl.google.com/linux/direct/google-chrome-
+  stable_current_amd64.deb
+  $sudo dpkg -i google-chrome-stable_current_amd64.deb
+\end{lstlisting}
+
+\subsection*{OpenNi}
+\url{https://structure.io/openni}
+
+\subsection*{Xtion}
+\url{https://www.asus.com/3D-Sensor/Xtion_PRO/HelpDesk_Download/}
+
+
+\end{document}
